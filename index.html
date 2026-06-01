@@ -3,22 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LAWIE - Bouddha's Requiem</title>
+<title>LAWIE Clan</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
+margin:0;
+font-family:Arial;
 background:#050505;
 color:white;
-overflow-x:hidden;
+scroll-behavior:smooth;
 }
 
+/* NAVBAR */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:#0a0a0a;
+border-bottom:1px solid #8a2be2;
+z-index:1000;
+}
+
+.logo{
+color:#8a2be2;
+font-weight:bold;
+font-size:20px;
+text-shadow:0 0 10px #8a2be2;
+}
+
+.links a{
+color:white;
+text-decoration:none;
+margin-left:12px;
+font-size:14px;
+}
+
+.links a:hover{
+color:#8a2be2;
+}
+
+/* HERO */
 .hero{
 height:100vh;
 display:flex;
@@ -26,166 +54,137 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:
-linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
 url("https://images.unsplash.com/photo-1511512578047-dfb367046420");
 background-size:cover;
 background-position:center;
 }
 
 .hero h1{
-font-size:5rem;
+font-size:60px;
 color:#8a2be2;
 text-shadow:0 0 20px #8a2be2;
 }
 
-.hero p{
-font-size:1.2rem;
-margin-top:15px;
-color:#ccc;
-}
-
 .btn{
-margin-top:30px;
-padding:15px 35px;
+margin-top:20px;
+padding:12px 25px;
 background:#8a2be2;
 color:white;
 text-decoration:none;
-border-radius:10px;
-box-shadow:0 0 20px #8a2be2;
-transition:.3s;
+border-radius:8px;
+box-shadow:0 0 15px #8a2be2;
 }
 
-.btn:hover{
-transform:scale(1.05);
-}
-
+/* SECTIONS */
 section{
-padding:80px 10%;
+padding:90px 20px;
+max-width:900px;
+margin:auto;
 }
 
 .title{
 text-align:center;
-font-size:2.5rem;
-margin-bottom:40px;
 color:#8a2be2;
-text-shadow:0 0 10px #8a2be2;
+margin-bottom:30px;
 }
 
 .card{
 background:#111;
-border:1px solid #8a2be2;
-padding:25px;
-border-radius:15px;
-margin-bottom:20px;
-box-shadow:0 0 15px rgba(138,43,226,.3);
-}
-
-.faction{
-background:linear-gradient(135deg,#120022,#1d0035);
-border:2px solid #8a2be2;
-text-align:center;
-}
-
-.faction h3{
-font-size:2rem;
-color:#b57cff;
-margin-bottom:15px;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.stat{
-background:#111;
 padding:20px;
-border-radius:12px;
+margin-bottom:20px;
 border:1px solid #333;
-text-align:center;
+border-radius:10px;
 }
 
-.stat h2{
-color:#8a2be2;
+.card:hover{
+border-color:#8a2be2;
+transform:scale(1.02);
+transition:0.3s;
 }
 
+/* FOOTER */
 footer{
 text-align:center;
-padding:30px;
-background:#080808;
+padding:20px;
 border-top:1px solid #222;
-color:#888;
+color:#777;
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-<h1>LAWIE</h1>
-<p>Loyauté • Respect • Puissance</p>
-<a href="#faction" class="btn">Découvrir la faction</a>
+<!-- NAV -->
+<div class="navbar">
+<div class="logo">LAWIE</div>
+<div class="links">
+<a href="#accueil">Accueil</a>
+<a href="#clan">Clan</a>
+<a href="#faction">Faction</a>
+<a href="#recrutement">Recrutement</a>
+<a href="#annonces">Annonces</a>
+</div>
 </div>
 
-<section>
+<!-- HERO -->
+<div class="hero" id="accueil">
+<h1>LAWIE</h1>
+<p>Loyauté • Respect • Puissance</p>
+<a class="btn" href="#recrutement">Rejoindre le clan</a>
+</div>
+
+<!-- CLAN -->
+<section id="clan">
 <h2 class="title">Le Clan LAWIE</h2>
 
 <div class="card">
 <p>
-Le clan LAWIE est une organisation bâtie sur la discipline,
-la cohésion et la domination du terrain.
-Chaque membre représente la force du collectif.
+LAWIE est un clan basé sur la discipline, la loyauté et la force collective.
+Chaque membre représente l’honneur du groupe.
 </p>
 </div>
 </section>
 
+<!-- FACTION -->
 <section id="faction">
 <h2 class="title">Bouddha's Requiem</h2>
 
-<div class="card faction">
-<h3>☠ BOUDDHA'S REQUIEM ☠</h3>
-
+<div class="card">
 <p>
-La faction du commandant Bouddha.
-Une unité d'élite connue pour son calme,
-sa stratégie et sa puissance.
+Faction d’élite dirigée par Bouddha.
+Stratégie, silence et domination totale.
 </p>
 </div>
 </section>
 
-<section>
-<h2 class="title">Statistiques</h2>
-
-<div class="stats">
-
-<div class="stat">
-<h2>01</h2>
-<p>Faction d'élite</p>
-</div>
-
-<div class="stat">
-<h2>∞</h2>
-<p>Détermination</p>
-</div>
-
-<div class="stat">
-<h2>100%</h2>
-<p>Loyauté</p>
-</div>
-
-</div>
-</section>
-
-<section>
+<!-- RECRUTEMENT -->
+<section id="recrutement">
 <h2 class="title">Recrutement</h2>
 
 <div class="card">
 <p>
-Les candidatures sont ouvertes aux joueurs
-respectueux et disciplinés.
+Rejoins le clan si tu es respectueux et actif.
 </p>
+
+<a class="btn" href="https://chat.whatsapp.com/GZGT5E38cBQ83y4pzHdRGv" target="_blank">
+Rejoindre le clan sur WhatsApp
+</a>
+</div>
+</section>
+
+<!-- ANNONCES -->
+<section id="annonces">
+<h2 class="title">Annonces</h2>
+
+<div class="card">
+<h3>🔥 Recrutement ouvert</h3>
+<p>La faction Bouddha's Requiem recrute actuellement.</p>
+</div>
+
+<div class="card">
+<h3>⚠ Mise à jour</h3>
+<p>Les règles du clan LAWIE ont été mises à jour.</p>
 </div>
 </section>
 
@@ -194,4 +193,4 @@ LAWIE © 2026 | Bouddha's Requiem
 </footer>
 
 </body>
-            </html>
+</html>
